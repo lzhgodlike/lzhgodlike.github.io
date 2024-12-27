@@ -2927,6 +2927,9 @@ table {
   border-collapse: collapse;
   empty-cells: show;
 }
+table tr:nth-child(even) {
+  background-color: var(--anzhiyu-secondbg);
+}
 table thead {
   background: var(--anzhiyu-secondbg);
 }
@@ -6051,6 +6054,16 @@ body[data-type='about'] #web_bg {
     width: 100% !important;
   }
 }
+@media screen and (min-width: 900px) {
+  .layout > div:first-child {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -o-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+}
 .layout.hide-aside {
   max-width: 1000px;
 }
@@ -7495,6 +7508,26 @@ body[data-type="link"] #page .page-title {
   }
   #home_top {
     padding: 0px 20px 0px;
+  }
+}
+div#bannerGroup {
+  margin-right: 10px;
+  width: calc(51% - 10px) !important;
+}
+@media screen and (max-width: 768px) {
+  #home_top {
+    padding: 0px 15px;
+  }
+  #topPostGroup {
+    height: 280px;
+  }
+  #swiper_container_blog {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div#bannerGroup {
+    display: none !important;
   }
 }
 #content-inner #recent-posts > .recent-post-item > .recent-post-info > .content {
@@ -9171,7 +9204,7 @@ h1.page-title + .tag-cloud-list {
 }
 @media screen and (min-width: 1200px) {
   #aside-content {
-    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -10898,6 +10931,12 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: 0.6s;
   transition: 0.6s;
   overflow: hidden;
+  -webkit-animation: header 5s linear forwards;
+  -moz-animation: header 5s linear forwards;
+  -o-animation: header 5s linear forwards;
+  -ms-animation: header 5s linear forwards;
+  animation: header 5s linear forwards;
+  animation-timeline: view();
   background-color: transparent;
 }
 #page-header.post-bg #nav {
